@@ -56,6 +56,8 @@ while not (winner := check()):
         x = int(input()) - 1
     except ValueError:
         continue
+    except KeyboardInterrupt:
+        exit()
 
     if x < 0 or x > 3 or not 0 in board[x]:
         continue
